@@ -1,0 +1,60 @@
+name: Bug report
+description: Report a reproducible bug in ZA ERP Suite
+labels: ["type: bug", "area: backend"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Please fill all relevant details so maintainers can reproduce quickly.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One-line description of the bug
+      placeholder: API returns 500 when approving purchase order
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Exact steps and API/UI actions
+      placeholder: |
+        1. Login as manager
+        2. Submit purchase order
+        3. Call approve endpoint
+        4. Observe error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      placeholder: Purchase order should move to completed and inventory should update
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      placeholder: Received 500 with traceback in logs
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, DB, Docker/local setup
+      placeholder: Ubuntu 24.04, Python 3.12, SQLite, local venv
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Traceback
+      description: Paste relevant logs, traceback, or error payload
+      render: shell

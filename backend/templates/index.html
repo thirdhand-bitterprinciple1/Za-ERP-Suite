@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ZA ERP Suite</title>
+    <style>
+      :root {
+        --bg: #0e1116;
+        --card: #1a2028;
+        --text: #f1f5f9;
+        --muted: #94a3b8;
+        --accent: #38bdf8;
+      }
+      body {
+        margin: 0;
+        font-family: "IBM Plex Sans", sans-serif;
+        background: radial-gradient(circle at top, #1f2937 0, var(--bg) 55%);
+        color: var(--text);
+      }
+      main {
+        max-width: 900px;
+        margin: 4rem auto;
+        padding: 0 1rem;
+      }
+      .card {
+        background: linear-gradient(135deg, #111827, var(--card));
+        border: 1px solid #334155;
+        border-radius: 16px;
+        padding: 2rem;
+      }
+      h1 { margin-top: 0; }
+      p { color: var(--muted); line-height: 1.6; }
+      code {
+        color: var(--accent);
+        background: #0f172a;
+        padding: 0.1rem 0.4rem;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="card">
+        <h1>ZA ERP Suite API</h1>
+        <p>
+          Modular business platform is running. Start with <code>/api/commerce</code>,
+          <code>/api/inventory</code>, and <code>/api/accounting</code>.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>

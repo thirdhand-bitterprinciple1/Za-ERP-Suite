@@ -1,0 +1,47 @@
+name: Feature request
+description: Suggest an enhancement for ZA ERP Suite
+labels: ["type: feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for new features, UX improvements, or architecture enhancements.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Feature summary
+      placeholder: Add approval comments and reason history
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What problem are you trying to solve?
+      placeholder: Managers cannot explain why a request was rejected
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe desired behavior
+      placeholder: Add comment field on approve/reject endpoints and store in audit trail
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      placeholder: Could rely on external ticketing system, but native ERP audit is better
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Expected impact
+      description: Which modules/users benefit?
+      placeholder: Purchasing, Sales, and Audit workflows

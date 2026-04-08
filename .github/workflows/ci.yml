@@ -1,0 +1,48 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  backend-ci:
+    name: Backend Lint Check Build
+    runs-on: ubuntu-latest
+
+    env:
+      DEBUG: "1"
+      DJANGO_SECRET_KEY: ci-temporary-secret
+      DB_ENGINE: django.db.backends.sqlite3
+      DB_NAME: db.sqlite3
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Dependencies
+        working-directory: backend
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install ruff
+
+      - name: Lint (Ruff)
+        run: ruff check backend --select E9,F63,F7,F82
+
+      - name: Django System Check
+        working-directory: backend
+        run: python manage.py check
+
+      - name: Migration Drift Check
+        working-directory: backend
+        run: python manage.py makemigrations --check --dry-run
+
+      - name: Build/Compile Check
+        working-directory: backend
+        run: python -m compileall apps config manage.py

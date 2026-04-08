@@ -1,0 +1,19 @@
+# Python virtual environments
+backend/.venv/
+
+# Local environment secrets
+backend/.env
+
+# Local SQLite DB and artifacts
+backend/db.sqlite3
+backend/__pycache__/
+backend/apps/**/__pycache__/
+backend/config/__pycache__/
+
+# OS / editor noise
+.DS_Store
+.vscode/
+
+# Frontend dependencies and build outputs
+frontend/node_modules/
+frontend/dist/
