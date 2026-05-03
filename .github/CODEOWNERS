@@ -1,8 +1,0 @@
-# CODEOWNERS
-# Format: <pattern> <owner>
-
-* @zainsardar-tech
-
-/backend/ @zainsardar-tech
-/.github/ @zainsardar-tech
-/*.md @zainsardar-tech
